@@ -9,6 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# in my config Mod4 is capslock
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
@@ -76,6 +77,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindcode $mod+d focus child
 
+# switch to the next/prev workspace
+bindsym $mod+Control+l workspace next
+bindsym $mod+Control+h workspace prev
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -116,26 +121,26 @@ bindsym $mod+Shift+E exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym 113 resize shrink width 10 px or 10 ppt
-        bindsym 116 resize grow height 10 px or 10 ppt
-        bindsym 111 resize shrink height 10 px or 10 ppt
-        bindsym 114 resize grow width 10 px or 10 ppt
+# same bindings, but for the arrow keys
+	bindsym 113 resize shrink width 10 px or 10 ppt
+	bindsym 116 resize grow height 10 px or 10 ppt
+	bindsym 111 resize shrink height 10 px or 10 ppt
+	bindsym 114 resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -143,5 +148,15 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+	status_command i3status
+	position top
 }
+
+# workspace toggling
+workspace_auto_back_and_forth yes
+bindsym $mod+p back_and_forth
+
+
+# assign programs to workspaces
+assign [class="Gimp"] 8
+
