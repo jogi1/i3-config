@@ -102,8 +102,8 @@ bindsym $mod+Shift+numbersign move container to workspace 3
 bindsym $mod+Shift+dollar move container to workspace 4
 bindsym $mod+Shift+percent move container to workspace 5
 
-bindsym $mod+Shift+tilde move container to workspace 6
-bindsym $mod+Shift+ampresand move container to workspace 7
+bindsym $mod+Shift+asciicircum move container to workspace 6
+bindsym $mod+Shift+ampersand move container to workspace 7
 
 bindsym $mod+Shift+asterisk move container to workspace 8
 bindsym $mod+Shift+parenleft move container to workspace 9
