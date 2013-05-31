@@ -154,9 +154,19 @@ bar {
 
 # workspace toggling
 workspace_auto_back_and_forth yes
-bindsym $mod+p back_and_forth
+#bindsym $mod+p back_and_forth
 
 
 # assign programs to workspaces
 assign [class="Gimp"] 8
 
+
+# shortcuts
+bindsym $mod+bracketright exec --no-startup-id "/usr/bin/amixer -c 0 set Master 1+ unmute"
+bindsym $mod+bracketleft exec --no-startup-id "/usr/bin/amixer -c 0 set Master 1- unmute"
+bindsym $mod+p exec --no-startup-id "/usr/bin/amixer sset Master toggle"
+
+bindsym $mod+shift+V exec --no-startup-id "/usr/bin/gvim"
+
+
+# volume control
