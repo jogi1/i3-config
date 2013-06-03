@@ -167,6 +167,7 @@ bindsym $mod+bracketleft exec --no-startup-id "/usr/bin/amixer -c 0 set Master 1
 bindsym $mod+p exec --no-startup-id "/usr/bin/amixer sset Master toggle"
 
 bindsym $mod+shift+V exec --no-startup-id "/usr/bin/gvim"
+bindsym $mod+shift+G exec --no-startup-id "google-chrome"
 
 
 # volume control
